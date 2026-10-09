@@ -1,0 +1,413 @@
+{
+  "tables": {
+    "users": [
+      "id",
+      "email",
+      "first_name",
+      "role",
+      "department",
+      "id_document_path",
+      "password_hash",
+      "password_salt",
+      "password_algorithm",
+      "password_iterations",
+      "password_updated_at",
+      "email_verified_at",
+      "last_login_at",
+      "created_at",
+      "updated_at",
+      "date_of_birth",
+      "otp",
+      "otp_expiry",
+      "last_name",
+      "avatar_url",
+      "phone",
+      "job_title"
+    ],
+    "posts": [
+      "id",
+      "author_id",
+      "content",
+      "created_at"
+    ],
+    "events": [
+      "id",
+      "title",
+      "description",
+      "start_time",
+      "end_time",
+      "organizer_id",
+      "department",
+      "created_at",
+      "event_type",
+      "channel_id",
+      "online",
+      "recording_url",
+      "recording_duration_seconds",
+      "cancelled_at",
+      "meeting_provider",
+      "meeting_room"
+    ],
+    "messages": [
+      "id",
+      "sender_id",
+      "receiver_id",
+      "content",
+      "created_at",
+      "reply_to_id",
+      "edited_at",
+      "deleted_at"
+    ],
+    "channels": [
+      "id",
+      "name",
+      "description",
+      "created_by",
+      "created_at",
+      "visibility",
+      "archived_at"
+    ],
+    "channel_messages": [
+      "id",
+      "channel_id",
+      "sender_id",
+      "content",
+      "created_at",
+      "reply_to_id",
+      "message_type",
+      "event_id",
+      "metadata_json",
+      "edited_at",
+      "deleted_at"
+    ],
+    "files": [
+      "id",
+      "filename",
+      "file_path",
+      "uploaded_by",
+      "department",
+      "size_bytes",
+      "created_at"
+    ],
+    "announcements": [
+      "id",
+      "title",
+      "content",
+      "author_id",
+      "priority",
+      "created_at",
+      "category",
+      "status",
+      "audience_type",
+      "audience_value",
+      "scheduled_at",
+      "published_at",
+      "pinned",
+      "reactions_enabled",
+      "require_acknowledgement",
+      "archived_at",
+      "updated_at"
+    ],
+    "notifications": [
+      "id",
+      "user_id",
+      "type",
+      "text",
+      "link",
+      "is_read",
+      "created_at",
+      "kind",
+      "entity_type",
+      "entity_id",
+      "actor_id",
+      "metadata_json",
+      "read_at"
+    ],
+    "updates": [
+      "id",
+      "author_id",
+      "content",
+      "created_at"
+    ],
+    "event_attendees": [
+      "event_id",
+      "user_id",
+      "response",
+      "invited_at",
+      "responded_at"
+    ],
+    "message_reactions": [
+      "id",
+      "target_type",
+      "target_id",
+      "user_id",
+      "emoji",
+      "created_at"
+    ],
+    "message_attachments": [
+      "id",
+      "target_type",
+      "target_id",
+      "uploaded_by",
+      "kind",
+      "filename",
+      "mime_type",
+      "size_bytes",
+      "storage_key",
+      "external_url",
+      "created_at"
+    ],
+    "announcement_attachments": [
+      "id",
+      "announcement_id",
+      "uploaded_by",
+      "kind",
+      "slot",
+      "filename",
+      "mime_type",
+      "size_bytes",
+      "storage_key",
+      "created_at"
+    ],
+    "announcement_reactions": [
+      "id",
+      "announcement_id",
+      "user_id",
+      "emoji",
+      "created_at"
+    ],
+    "announcement_acknowledgements": [
+      "announcement_id",
+      "user_id",
+      "acknowledged_at"
+    ],
+    "channel_members": [
+      "channel_id",
+      "user_id",
+      "member_role",
+      "joined_at",
+      "last_read_at"
+    ],
+    "direct_read_state": [
+      "user_id",
+      "peer_id",
+      "last_read_at"
+    ],
+    "announcement_views": [
+      "announcement_id",
+      "user_id",
+      "first_viewed_at",
+      "last_viewed_at",
+      "view_count"
+    ],
+    "call_signals": [
+      "id",
+      "caller_id",
+      "caller_name",
+      "target_user_id",
+      "room_name",
+      "status",
+      "created_at"
+    ],
+    "employee_profiles": [
+      "user_id",
+      "personal_email",
+      "alternate_phone",
+      "identity_number",
+      "gender",
+      "city",
+      "province",
+      "start_date",
+      "updated_at"
+    ],
+    "employee_documents": [
+      "id",
+      "user_id",
+      "kind",
+      "object_key",
+      "filename",
+      "content_type",
+      "size",
+      "uploaded_by",
+      "created_at"
+    ],
+    "employee_id_verifications": [
+      "user_id",
+      "verified_by",
+      "verified_at",
+      "document_id"
+    ],
+    "employee_document_audit": [
+      "id",
+      "user_id",
+      "actor_id",
+      "action",
+      "document_id",
+      "created_at"
+    ],
+    "login_challenges": [
+      "user_id",
+      "token_hash",
+      "code_hash",
+      "email",
+      "expires_at",
+      "attempts",
+      "sent_at",
+      "window_start",
+      "send_count"
+    ],
+    "learning_positions": [
+      "id",
+      "title",
+      "division",
+      "position_type",
+      "assessment_description",
+      "assessment_type",
+      "assessment_target",
+      "report_days",
+      "report_format",
+      "created_by",
+      "created_at"
+    ],
+    "learning_courses": [
+      "id",
+      "title",
+      "description",
+      "status",
+      "created_by",
+      "created_at"
+    ],
+    "learning_sections": [
+      "id",
+      "course_id",
+      "title",
+      "sort_order"
+    ],
+    "learning_lessons": [
+      "id",
+      "course_id",
+      "section_id",
+      "title",
+      "content",
+      "resource_url",
+      "sort_order",
+      "kind",
+      "required",
+      "duration_minutes",
+      "storage_key",
+      "content_type"
+    ],
+    "learning_position_courses": [
+      "position_id",
+      "course_id"
+    ],
+    "learning_candidates": [
+      "user_id",
+      "position_id",
+      "candidate_group",
+      "territory",
+      "qualification",
+      "institution",
+      "start_date",
+      "assigned_by",
+      "assigned_at"
+    ],
+    "learning_assignments": [
+      "user_id",
+      "course_id",
+      "required",
+      "due_date",
+      "started_at",
+      "assigned_by",
+      "assigned_at"
+    ],
+    "learning_progress": [
+      "user_id",
+      "lesson_id",
+      "completed_at"
+    ],
+    "learning_assessments": [
+      "id",
+      "user_id",
+      "requirement_key",
+      "description",
+      "measurement_type",
+      "target",
+      "progress",
+      "started_at",
+      "completed_at",
+      "evidence",
+      "active",
+      "is_override",
+      "assigned_by",
+      "created_at"
+    ],
+    "tracking_submissions": [
+      "id",
+      "user_id",
+      "due_date",
+      "evidence_url",
+      "notes",
+      "submitted_at"
+    ],
+    "learning_audit": [
+      "id",
+      "actor_id",
+      "user_id",
+      "action",
+      "entity_id",
+      "created_at"
+    ],
+    "learning_quizzes": [
+      "id",
+      "course_id",
+      "title",
+      "pass_mark",
+      "required",
+      "questions"
+    ],
+    "learning_quiz_attempts": [
+      "id",
+      "user_id",
+      "quiz_id",
+      "score",
+      "passed",
+      "attempted_at"
+    ],
+    "request_limits": [
+      "key",
+      "window_start",
+      "count"
+    ],
+    "file_departments": [
+      "id",
+      "name"
+    ],
+    "employee_internships": [
+      "user_id",
+      "status",
+      "started_at",
+      "target_date",
+      "qualified_at",
+      "qualified_by",
+      "qualification_evidence",
+      "source_reference",
+      "imported_at"
+    ],
+    "internship_history": [
+      "id",
+      "user_id",
+      "status",
+      "recorded_at",
+      "actor_id",
+      "evidence"
+    ]
+  },
+  "triggers": [
+    "freeze_assigned_lessons",
+    "freeze_assigned_quizzes",
+    "assessment_prerequisites",
+    "quiz_attempt_rate_limit",
+    "internship_status_history"
+  ]
+}

@@ -1,0 +1,44 @@
+// Database scalar shapes, including nullable columns, from schema.sql.
+export interface DatabaseRows {
+"users": {"id": string; "email": string; "first_name": string | null; "role": string; "department": string; "id_document_path": string; "password_hash": string; "password_salt": string; "password_algorithm": string; "password_iterations": number; "password_updated_at": string; "email_verified_at": string | null; "last_login_at": string | null; "created_at": string; "updated_at": string; "date_of_birth": string | null; "otp": string | null; "otp_expiry": string | null; "last_name": string | null; "avatar_url": string | null; "phone": string | null; "job_title": string | null; "appointed_manager": string | null; "archived_at": string | null};
+"posts": {"id": string; "author_id": string; "content": string; "created_at": string | null};
+"events": {"id": string; "title": string; "description": string | null; "start_time": string; "end_time": string; "organizer_id": string; "department": string; "created_at": string | null; "event_type": string; "channel_id": string | null; "online": number; "recording_url": string | null; "recording_duration_seconds": number | null; "cancelled_at": string | null; "meeting_provider": string | null; "meeting_room": string | null; "recurrence_type": string; "recurrence_day": number | null; "recurrence_end_date": string | null};
+"messages": {"id": string; "sender_id": string; "receiver_id": string; "content": string; "created_at": string | null; "reply_to_id": string | null; "edited_at": string | null; "deleted_at": string | null};
+"channels": {"id": string; "name": string; "description": string | null; "created_by": string; "created_at": string | null; "visibility": string; "archived_at": string | null};
+"channel_messages": {"id": string; "channel_id": string; "sender_id": string; "content": string; "created_at": string | null; "reply_to_id": string | null; "message_type": string; "event_id": string | null; "metadata_json": string | null; "edited_at": string | null; "deleted_at": string | null};
+"files": {"id": string; "filename": string; "file_path": string; "uploaded_by": string; "department": string; "size_bytes": number; "created_at": string | null};
+"announcements": {"id": string; "title": string; "content": string; "author_id": string; "priority": string | null; "created_at": string | null; "category": string; "status": string; "audience_type": string; "audience_value": string | null; "scheduled_at": string | null; "published_at": string | null; "pinned": number; "reactions_enabled": number; "require_acknowledgement": number; "archived_at": string | null; "updated_at": string | null; "target_department": string; "target_job_title": string};
+"notifications": {"id": string; "user_id": string; "type": string; "text": string; "link": string; "is_read": number | null; "created_at": string | null; "kind": string; "entity_type": string | null; "entity_id": string | null; "actor_id": string | null; "metadata_json": string | null; "read_at": string | null};
+"updates": {"id": string; "author_id": string; "content": string; "created_at": string | null};
+"d1_migrations": {"id": number; "name": string | null; "applied_at": string};
+"event_attendees": {"event_id": string; "user_id": string; "response": string; "invited_at": string | null; "responded_at": string | null};
+"message_reactions": {"id": string; "target_type": string; "target_id": string; "user_id": string; "emoji": string; "created_at": string | null};
+"message_attachments": {"id": string; "target_type": string; "target_id": string; "uploaded_by": string; "kind": string; "filename": string; "mime_type": string | null; "size_bytes": number; "storage_key": string | null; "external_url": string | null; "created_at": string | null};
+"announcement_attachments": {"id": string; "announcement_id": string; "uploaded_by": string; "kind": string; "slot": string; "filename": string; "mime_type": string | null; "size_bytes": number; "storage_key": string; "created_at": string | null};
+"announcement_reactions": {"id": string; "announcement_id": string; "user_id": string; "emoji": string; "created_at": string | null};
+"announcement_acknowledgements": {"announcement_id": string; "user_id": string; "acknowledged_at": string | null};
+"channel_members": {"channel_id": string; "user_id": string; "member_role": string; "joined_at": string; "last_read_at": string | null};
+"direct_read_state": {"user_id": string; "peer_id": string; "last_read_at": string};
+"announcement_views": {"announcement_id": string; "user_id": string; "first_viewed_at": string; "last_viewed_at": string; "view_count": number};
+"call_signals": {"id": string; "caller_id": string | null; "caller_name": string | null; "target_user_id": string | null; "room_name": string | null; "status": string | null; "created_at": string | null};
+"employee_profiles": {"user_id": string; "personal_email": string | null; "alternate_phone": string | null; "identity_number": string | null; "gender": string | null; "city": string | null; "province": string | null; "start_date": string | null; "updated_at": string};
+"employee_documents": {"id": string; "user_id": string; "kind": string; "object_key": string; "filename": string; "content_type": string; "size": number; "uploaded_by": string; "created_at": string};
+"employee_id_verifications": {"user_id": string; "verified_by": string; "verified_at": string; "document_id": string | null};
+"employee_document_audit": {"id": string; "user_id": string; "actor_id": string; "action": string; "document_id": string | null; "created_at": string};
+"login_challenges": {"user_id": string; "token_hash": string; "code_hash": string; "email": string; "expires_at": number; "attempts": number; "sent_at": number; "window_start": number; "send_count": number};
+"learning_positions": {"id": string; "title": string; "division": string; "position_type": string; "assessment_description": string; "assessment_type": string; "assessment_target": number | null; "report_days": string; "report_format": string; "created_by": string; "created_at": string};
+"learning_courses": {"id": string; "title": string; "description": string; "status": string; "created_by": string; "created_at": string};
+"learning_sections": {"id": string; "course_id": string; "title": string; "sort_order": number};
+"learning_lessons": {"id": string; "course_id": string; "section_id": string | null; "title": string; "content": string; "resource_url": string; "sort_order": number; "kind": string; "required": number; "duration_minutes": number; "storage_key": string | null; "content_type": string | null};
+"learning_position_courses": {"position_id": string; "course_id": string};
+"learning_candidates": {"user_id": string; "position_id": string; "candidate_group": string; "territory": string; "qualification": string; "institution": string; "start_date": string | null; "assigned_by": string; "assigned_at": string};
+"learning_assignments": {"user_id": string; "course_id": string; "required": number; "due_date": string | null; "started_at": string | null; "assigned_by": string; "assigned_at": string};
+"learning_progress": {"user_id": string; "lesson_id": string; "completed_at": string};
+"learning_assessments": {"id": string; "user_id": string; "requirement_key": string; "description": string; "measurement_type": string; "target": number | null; "progress": number; "started_at": string | null; "completed_at": string | null; "evidence": string; "active": number; "is_override": number; "assigned_by": string; "created_at": string};
+"tracking_submissions": {"id": string; "user_id": string; "due_date": string; "evidence_url": string; "notes": string; "submitted_at": string};
+"learning_audit": {"id": string; "actor_id": string; "user_id": string | null; "action": string; "entity_id": string; "created_at": string};
+"learning_quizzes": {"id": string; "course_id": string; "title": string; "pass_mark": number; "required": number; "questions": string};
+"learning_quiz_attempts": {"id": string; "user_id": string; "quiz_id": string; "score": number; "passed": number; "attempted_at": string};
+"request_limits": {"key": string; "window_start": number; "count": number};
+"crm_metrics": {"id": string; "employee_id": string; "metric_type": string; "metric_value": string; "notes": string; "logged_at": string};
+}

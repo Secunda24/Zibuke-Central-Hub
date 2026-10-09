@@ -1,0 +1,22 @@
+import type {DatabaseRows} from '../backend/database-rows';
+import type {Question,reportingStatus} from './domain';
+import type {courseState} from './queries';
+export type Lesson=DatabaseRows['learning_lessons'] & {completed_at?:string|null;section_title?:string|null;files?:{id:string;kind:string;content_type:string;filename:string;size:number}[]};
+export type Quiz=Omit<DatabaseRows['learning_quizzes'],'questions'> & {questions:Omit<Question,'correct'>[]};
+export type Attempt=DatabaseRows['learning_quiz_attempts'];
+export type Overview={
+ person:Pick<DatabaseRows['users'],'id'|'first_name'|'last_name'|'email'|'role'|'department'|'job_title'>;
+ internship:{status:string;started_at:string|null;target_date:string|null;qualified_at:string|null;qualification_evidence:string|null}|null;
+ isAdmin:boolean;eligible:boolean;
+ candidate:(DatabaseRows['learning_candidates'] & Pick<DatabaseRows['learning_positions'],'title'|'division'|'position_type'|'report_format'|'report_days'>)|null;
+ courses:(ReturnType<typeof courseState>&{description:string})[];lessons:Lesson[];
+ assessments:DatabaseRows['learning_assessments'][];
+ quizzes:Quiz[];attempts:Attempt[];
+ submissions:DatabaseRows['tracking_submissions'][];
+ reporting:ReturnType<typeof reportingStatus>|null;
+ catalog:DatabaseRows['learning_courses'][];positions:DatabaseRows['learning_positions'][];
+ people:Pick<DatabaseRows['users'],'id'|'first_name'|'last_name'>[];
+ prerequisites:DatabaseRows['learning_position_courses'][];
+ catalogLessons:Lesson[];catalogQuizzes:DatabaseRows['learning_quizzes'][];sections:DatabaseRows['learning_sections'][];
+ access:{role:string;scope:string};
+};

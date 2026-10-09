@@ -1,0 +1,67 @@
+[
+  {
+    "url": "/dashboard",
+    "title": "Home and navigation",
+    "text": "Zibuke Central is the internal employee workspace. Use the sidebar for Home, Messages, Channels, Files, Announcements, Calendar, People, Birthdays and Reports. The top bar includes OnCall Portal, Start Call and notifications. The profile menu leads to settings and sign out. Admin is shown for administrators. Some actions depend on your role and permissions. Use Search beside the OnCall Portal button, or Ctrl/Cmd + K, to search platform help, people, your direct messages, accessible channels and announcements, permitted file names and folders, calendar events, feed posts, your notifications, and the indexed public pages of Zibuke Africa and Zibuke OnCall. Filter by All, Platform, Zibuke Africa or Zibuke OnCall. Enter at least two characters. Results link to the relevant screen or website. Search does not read file contents. Escape closes the search panel."
+  },
+  {
+    "url": "/dashboard/messages",
+    "title": "Direct messages and TL;DR",
+    "text": "Open Messages and choose a colleague to open a private conversation. Type your message and send it. In a conversation you can reply, react, add attachments, search, and edit or delete your own messages where the controls are available. For a message of at least 400 characters, click TL;DR to generate a private AI summary. Hide TL;DR collapses it. The original remains unchanged. AI summaries cover message text, not attachments or linked pages, and require the AI service to be configured."
+  },
+  {
+    "url": "/dashboard/channels",
+    "title": "Channels and team conversations",
+    "text": "Open Channels to see team discussion spaces. Use Create Channel, enter the channel name and description, and submit the form. Open a channel to read or send messages. The visible channel screen provides its own message and reply controls. Private or restricted channel access depends on membership and role. Do not promise that controls from direct messages are available in every channel screen."
+  },
+  {
+    "url": "/dashboard/people",
+    "title": "People directory and calling a colleague",
+    "text": "Open People to find colleagues and filter by division. Use the call action on a colleague to send a call invitation. The caller joins a unique Zibuke Meet room; the recipient clicks Accept on the incoming-call notification to join that same room, or Decline. Use separate signed-in accounts when testing calls. Employee management and removal require administrator permissions."
+  },
+  {
+    "url": "/dashboard/call",
+    "title": "Zibuke Meet: video calls, screen sharing and scheduling",
+    "text": "Open Start Call in the top bar to reach Zibuke Meet. Join Instant Meeting joins the shared company watercooler. Schedule for Later opens the department meeting form: enter a title, select a department, date and time, then Schedule & Notify. During a connected call use Microphone, Camera, Share screen, Chat and Leave. Browser camera/microphone permission is required to publish those devices. Device warnings let you stay in the call; allow access in browser settings then enable the device. Retry reconnects after a connection failure. One account joining the same room on another tab or device can disconnect the older session. The bot cannot join a call, record it or change browser permissions."
+  },
+  {
+    "url": "/dashboard/calendar",
+    "title": "Calendar and events",
+    "text": "Open Calendar to browse events, meetings and huddles. Search by title, organiser or channel and use available calendar views and filters. Create a calendar item with title, starts, ends, agenda, attendees and online settings using the form. Open an event for details and attendance response controls. Editing and cancellation depend on organiser/admin permissions. Meeting scheduling and the separate call screen may have different controls; do not assume every calendar link automatically joins a call."
+  },
+  {
+    "url": "/dashboard/files",
+    "title": "Company Files and document vault",
+    "text": "Open Files to reach Company Files / Document Vault. Use Upload File, select a document, choose its Department Folder and submit. The table shows filename, department, size and uploader. Open views a file. Edit File Metadata and Delete are available only where the interface permits them. An empty vault may mean no files or insufficient access. The assistant cannot read uploaded file contents."
+  },
+  {
+    "url": "/dashboard/announcements",
+    "title": "Announcements and acknowledgements",
+    "text": "Open Announcements to browse company notices, search and filter them. Open an announcement to read its full content and attachments. Required acknowledgements appear under Needs your attention; use the acknowledgement action to confirm you have read the notice. Authors with permission can Create announcement, add a title, content, category, audience and attachments, choose Publish now, Schedule or Draft, and set pinning, reactions or acknowledgement requirements. Availability depends on role. The assistant does not know unpublished notices or individual acknowledgement status."
+  },
+  {
+    "url": "/dashboard/notifications",
+    "title": "Notifications",
+    "text": "Use the bell in the header or open Notifications to see updates you are allowed to view. Open a notification to follow its associated item and use the available read controls. Incoming calls appear separately with Accept and Decline. The assistant cannot inspect your notifications or mark items read for you."
+  },
+  {
+    "url": "/dashboard/settings",
+    "title": "Profile and account settings",
+    "text": "Open the profile menu and select Settings to update account details using the displayed sections. Profile, avatar and password changes use separate controls. Save changes in the relevant section and check for a success message. Never share passwords, session cookies, API keys or identity documents with the bot. The assistant cannot reset your password or change your account."
+  },
+  {
+    "url": "/dashboard/birthdays",
+    "title": "Birthdays",
+    "text": "Open Birthdays to see the birthday information and celebration controls made available by the platform. The assistant explains this screen but does not retrieve or disclose employees' dates of birth."
+  },
+  {
+    "url": "/dashboard/reports",
+    "title": "Reports and metrics",
+    "text": "Open Reports to view available platform metrics: Total Employees, Vault Files, Active Channels, Announcements and Headcount by Division. Values come from the current report screen. The assistant cannot see live metrics and must not invent figures or promise an export control that is not present."
+  },
+  {
+    "url": "/dashboard/admin",
+    "title": "Administration and employee onboarding",
+    "text": "Admin is for administrators. It provides employee records, access roles, division/organogram and job title management, single-entry onboarding and roster CSV import. New single entries require a verified ID document; legacy import has its own exemption notice and requirements. Follow the form's instructions and permissions. Never send identity documents or roster contents to the assistant. If Admin is not visible, ask an administrator for the appropriate access. The assistant cannot grant roles, remove users or upload a roster."
+  }
+]

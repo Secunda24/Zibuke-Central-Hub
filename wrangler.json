@@ -1,0 +1,51 @@
+{
+  "triggers": {"crons": ["0 * * * *"]},
+    "name": "zibuke-central",
+    "account_id": "59d043a264dc6132d6feb01884cf2533",
+    "compatibility_date": "2026-09-17",
+    "compatibility_flags": [
+        "nodejs_compat"
+    ],
+    "main": "worker.mjs",
+    "assets": {
+        "directory": ".open-next/assets",
+        "binding": "ASSETS"
+    },
+    "routes": [
+        {
+            "pattern": "central.zibukeafrica.com",
+            "custom_domain": true
+        }
+    ],
+    "vars": {
+        "FIRST_LOGIN_OTP_ENABLED": "false",
+        "OTP_EMAIL_FROM": "Zibuke Central <jayjacobs@zibukeafrica.co.za>",
+        "NEXTAUTH_URL": "https://central.zibukeafrica.com",
+        "NEXT_PUBLIC_LIVEKIT_URL": "wss://zibuke-9bcgcl0c.livekit.cloud"
+    },
+    "d1_databases": [
+        {
+            "binding": "DB",
+            "database_name": "zibuke-central-prod",
+            "database_id": "b30f2ba0-4216-49e6-b236-fa28d083bbd7"
+        }
+    ],
+    "r2_buckets": [
+        {
+            "binding": "EMPLOYEE_DOCUMENTS_BUCKET",
+            "bucket_name": "zibuke-employee-documents"
+        },
+        {
+            "binding": "AVATARS_BUCKET",
+            "bucket_name": "zibuke-avatars"
+        },
+        {
+            "binding": "COLLAB_BUCKET",
+            "bucket_name": "zibuke-collaboration"
+        },
+        {
+            "binding": "POPI_DOCUMENTS_BUCKET",
+            "bucket_name": "zibuke-popi-documents"
+        }
+    ]
+}
